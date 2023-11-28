@@ -3,6 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- To connect to Misty robot -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="tools/lightSocket.js"></script>
+        <script src=".\node_modules\talkify-tts\dist\talkify.min.js"></script>
+        
         <title>Tic Tac Toe</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
@@ -13,8 +19,8 @@
             <div class="field">
                 <label for="starting">Starting Player</label>
                 <select id="starting">
-                    <option value="1">Human</option>
-                    <option value="0">Computer</option>
+                    <option value="0">Human</option>
+                    <option value="1">Robot</option>
                 </select>
             </div>
             
@@ -26,6 +32,15 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option selected="selected" value="-1">Unlimited</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="test_scenario">Test Scenario (As instructed by Experimenters)</label>
+                <select id="test_scenario">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
             </div>
             
